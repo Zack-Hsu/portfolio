@@ -64,7 +64,7 @@ export default function TeamTaiwanHero() {
                         WE'RE FROM TAIWAN
                     </Heading>
                 </div>
-                <SmartImage src="/portfolio/images/polish/gif/team-taiwan.gif" height={30} objectFit="cover">
+                <SmartImage src="/images/polish/gif/team-taiwan.gif" height={30} objectFit="cover">
                 </SmartImage>
             </Background>
         </Grid>
