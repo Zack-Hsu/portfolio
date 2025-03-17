@@ -27,15 +27,7 @@ export default function _() {
                 </SmartLink>
                 <Row gap="12" hide="s">
                     <Button
-                        href="https://discord.com/invite/5EyAQ4eNdS"
-                        prefixIcon="discord"
-                        size="s"
-                        label="Discord"
-                        weight="default"
-                        variant="primary"
-                    />
-                    <Button
-                        href="https://github.com/once-ui-system/nextjs-starter"
+                        href="https://github.com/Zack-Hsu/"
                         prefixIcon="github"
                         size="s"
                         label="GitHub"
@@ -45,12 +37,7 @@ export default function _() {
                 </Row>
                 <Row gap="16" show="s" horizontal="center" paddingRight="24">
                     <IconButton
-                        href="https://discord.com/invite/5EyAQ4eNdS"
-                        icon="discord"
-                        variant="tertiary"
-                    />
-                    <IconButton
-                        href="https://github.com/once-ui-system/nextjs-starter"
+                        href="https://github.com/Zack-Hsu/"
                         icon="github"
                         variant="tertiary"
                     />

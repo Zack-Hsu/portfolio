@@ -44,7 +44,7 @@ export default function _() {
                 <Heading wrap="balance" variant="display-strong-l">
                     <div ref={titleRef} style={{ display: "flex", flexWrap: "wrap" }}>
                         {`Full Stack Developer`.split("").map((itm, i) => {
-                            return <div key={i} style={{ minWidth: "12px" }}>{itm}</div>
+                            return <div key={i} style={{ minWidth: "12px", whiteSpace: "pre-wrap" }}>{itm}</div>
                         })}
                         <div style={{ marginLeft: '3rem' }}>x</div>
                         {` Freelancer`.split("").map((itm, i) => {
