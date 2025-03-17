@@ -43,6 +43,14 @@ export default function _() {
                     />
                 </Row>
                 <Row gap="16" show="s" horizontal="center" paddingRight="24">
+                    <Button
+                        href="/team-taiwan"
+                        prefixIcon="openLink"
+                        size="s"
+                        label="Team Taiwan"
+                        weight="default"
+                        variant="tertiary"
+                    />
                     <IconButton
                         href="https://github.com/Zack-Hsu/"
                         icon="github"
