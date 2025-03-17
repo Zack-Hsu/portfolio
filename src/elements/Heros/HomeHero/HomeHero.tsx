@@ -34,12 +34,11 @@ export default function _() {
         <Grid
             columns="2"
             gap="24"
-            padding="24"
         >
             <Grid
                 columns="1"
                 gap="24"
-                padding="24"
+                width={"s"}
             >
                 <Heading wrap="balance" variant="display-strong-l">
                     <div ref={titleRef} style={{ display: "flex", flexWrap: "wrap" }}>
@@ -73,6 +72,12 @@ export default function _() {
                         "責任驅動 x 持續優化：對每個細節都講究，積極推動專案落地，讓技術帶來實際成效"
                     </TypeWritter>
                 </Text>
+            </Grid>
+            <Grid
+                columns="1"
+                gap="128"
+            >
+
             </Grid>
         </Grid >
 

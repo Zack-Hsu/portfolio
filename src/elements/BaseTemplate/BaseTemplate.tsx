@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import { baseURL, style, meta, og, schema, social } from "@/once-ui/resources/config";
-import { Background, Column, Flex, ToastProvider, Fade } from "@/once-ui/components";
+import { Background, Column, Flex, ToastProvider, Fade, Grid } from "@/once-ui/components";
 import { Inter } from "next/font/google";
 import { Roboto_Mono } from "next/font/google";
 import Nav from "@/elements/Layout/Nav"
@@ -104,8 +104,10 @@ export default function BaseTemplate(props: { children?: ReactNode }) {
                             fillWidth
                             blur={0.25}
                         />
-                        <Nav />
-                        {children}
+                        <Grid>
+                            <Nav />
+                            {children}
+                        </Grid>
                     </Column>
                 </Column>
             </ToastProvider>

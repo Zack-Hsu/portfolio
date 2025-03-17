@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import { baseURL, style, meta, og, schema, social } from "@/once-ui/resources/config";
-import { Background, Column, Flex, ToastProvider, Fade } from "@/once-ui/components";
+import { Background, Column, Flex, ToastProvider, Fade, Grid } from "@/once-ui/components";
 import { Inter } from "next/font/google";
 import { Roboto_Mono } from "next/font/google";
 import Nav from "@/elements/Layout/Nav"
@@ -64,25 +64,23 @@ export default function PolishTemplate(props: { children?: ReactNode }) {
         >
             <Link rel="stylesheet" href="https://use.typekit.net/pxc5lqp.css" />
             <ToastProvider>
-                <Column as="div" fillWidth margin="0">
-                    <Column fillWidth paddingY="80" paddingX="xs" horizontal="center" flex={1} style={{ minHeight: '100vh' }} >
-                        <Fade
-                            zIndex={3}
-                            pattern={{
-                                display: true,
-                                size: "4",
-                            }}
-                            position="fixed"
-                            top="0"
-                            left="0"
-                            to="bottom"
-                            height={5}
-                            fillWidth
-                            blur={0.25}
-                        />
-                        <Nav />
-                        {children}
-                    </Column>
+                <Column fillWidth paddingY="80" horizontal="center" flex={1} style={{ minHeight: '100vh' }} >
+                    <Fade
+                        zIndex={3}
+                        pattern={{
+                            display: true,
+                            size: "4",
+                        }}
+                        position="fixed"
+                        top="0"
+                        left="0"
+                        to="bottom"
+                        height={5}
+                        fillWidth
+                        blur={0.25}
+                    />
+                    <Nav />
+                    {children}
                 </Column>
             </ToastProvider>
         </Flex >

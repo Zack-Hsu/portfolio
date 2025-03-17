@@ -6,10 +6,9 @@ export default function _() {
             <Row
                 data-border="rounded"
                 horizontal="space-between"
-                maxWidth="l"
-                paddingRight="64"
-                paddingLeft="32"
+                fillWidth
                 paddingY="20"
+                width='l'
             >
                 <SmartLink
                     href="/"
@@ -21,18 +20,26 @@ export default function _() {
                         onBackground="neutral-medium"
                     >
                         <h3>
-                            Zack Works
+                            Polish Exam
                         </h3>
                     </Text>
                 </SmartLink>
                 <Row gap="12" hide="s">
+                    <Button
+                        href="/team-taiwan"
+                        prefixIcon="openLink"
+                        size="s"
+                        label="Team Taiwan"
+                        weight="default"
+                        variant="tertiary"
+                    />
                     <Button
                         href="https://github.com/Zack-Hsu/"
                         prefixIcon="github"
                         size="s"
                         label="GitHub"
                         weight="default"
-                        variant="tertiary"
+                        variant="primary"
                     />
                 </Row>
                 <Row gap="16" show="s" horizontal="center" paddingRight="24">
