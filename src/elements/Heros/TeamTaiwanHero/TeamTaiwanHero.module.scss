@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 650px;
+    background-image: url(/portfolio/images/polish/background/g-pic@2x.png);
+    background-size: cover;
+    flex-shrink: 0;
+    align-content: center;
+
+    .tw_sentence_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
+
+.tw_ani_text {
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 64px;
+    margin-left: .03rem;
+    min-width: 12px;
+    font-family: 'poppins';
+    color: #fff;
+}
+
+@media screen and (max-width:1080px) {
+    .container {
+        min-height: 450px;
+    }
+
+    .tw_ani_text {
+        font-size: 6vw;
+        font-weight: 500;
+        line-height: 40px;
+        margin-left: .03rem;
+        min-width: 6px;
+        font-family: 'poppins';
+    }
+}

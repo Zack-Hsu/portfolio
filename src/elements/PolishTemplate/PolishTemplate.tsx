@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import { Roboto_Mono } from "next/font/google";
 import Nav from "@/elements/Layout/Nav"
 import { ReactNode } from "react";
+import Link from "next/link";
 
 const primary = Inter({
     variable: "--font-primary",
@@ -36,7 +37,7 @@ const schemaData = {
     sameAs: Object.values(social).filter(Boolean),
 };
 
-export default function BaseTemplate(props: { children?: ReactNode }) {
+export default function PolishTemplate(props: { children?: ReactNode }) {
     const { children } = props
     return (
         <Flex
@@ -61,35 +62,10 @@ export default function BaseTemplate(props: { children?: ReactNode }) {
                 tertiary?.variable
             )}
         >
+            <Link rel="stylesheet" href="https://use.typekit.net/pxc5lqp.css" />
             <ToastProvider>
-                <Column as="div" fillWidth margin="0" paddingX="xl">
-                    <Background
-                        position="absolute"
-                        mask={{
-                            x: 100,
-                            y: 0,
-                            radius: 100,
-                        }}
-                        gradient={{
-                            display: true,
-                            x: 100,
-                            y: 60,
-                            width: 70,
-                            height: 50,
-                            tilt: -40,
-                            opacity: 90,
-                            colorStart: "accent-background-strong",
-                            colorEnd: "page-background",
-                        }}
-                        grid={{
-                            display: false,
-                            opacity: 100,
-                            width: "0.25rem",
-                            color: "neutral-alpha-medium",
-                            height: "0.25rem",
-                        }}
-                    />
-                    <Column fillWidth paddingY="80" paddingX="xl" horizontal="center" flex={1} >
+                <Column as="div" fillWidth margin="0">
+                    <Column fillWidth paddingY="80" paddingX="xs" horizontal="center" flex={1} style={{ minHeight: '100vh' }} >
                         <Fade
                             zIndex={3}
                             pattern={{

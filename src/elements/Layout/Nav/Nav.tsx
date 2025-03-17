@@ -42,12 +42,6 @@ export default function _() {
                         weight="default"
                         variant="tertiary"
                     />
-                    {/**
-                 * 
-                <Row position="fixed" top="20" right="20">
-                    <StyleOverlay position="fixed" top="8" right="8" style={{ height: "calc(100vh - var(--static-space-16))" }} />
-                </Row>
-                 */}
                 </Row>
                 <Row gap="16" show="s" horizontal="center" paddingRight="24">
                     <IconButton
@@ -60,9 +54,6 @@ export default function _() {
                         icon="github"
                         variant="tertiary"
                     />
-                    <Row position="fixed" top="20" right="20">
-                        <StyleOverlay position="fixed" top="8" right="8" style={{ height: "calc(100vh - var(--static-space-16))" }} />
-                    </Row>
                 </Row>
             </Row>
         </Row>

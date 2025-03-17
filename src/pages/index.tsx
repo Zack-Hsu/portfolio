@@ -13,14 +13,15 @@ import {
     Grid,
 
 } from "@/once-ui/components";
-import { CodeBlock, MediaUpload } from "@/once-ui/modules";
+
 import BaseTemplate from "@/elements/BaseTemplate/BaseTemplate";
 import HomeHero from "@/elements/Heros/HomeHero"
+import FlipReveal3D from "@/elements/AnimationEffects/FlipReveal3D";
 export default function Home() {
     const [iconIsActive, setIconIsActive] = useState(false)
     return (
         <BaseTemplate>
-            <div style={{ height: "100vh" }}>
+            <div style={{ minHeight: "100vh" }}>
                 <HomeHero />
             </div>
         </BaseTemplate >
