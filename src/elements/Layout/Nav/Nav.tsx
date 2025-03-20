@@ -20,7 +20,7 @@ export default function _() {
                         onBackground="neutral-medium"
                     >
                         <h3>
-                            Polish Exam
+                            My Works
                         </h3>
                     </Text>
                 </SmartLink>

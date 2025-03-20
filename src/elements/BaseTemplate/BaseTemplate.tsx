@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import { Roboto_Mono } from "next/font/google";
 import Nav from "@/elements/Layout/Nav"
 import { ReactNode } from "react";
+import Link from "next/link";
 
 const primary = Inter({
     variable: "--font-primary",
@@ -61,54 +62,25 @@ export default function BaseTemplate(props: { children?: ReactNode }) {
                 tertiary?.variable
             )}
         >
+            <Link rel="stylesheet" href="https://use.typekit.net/pxc5lqp.css" />
             <ToastProvider>
-                <Column as="div" fillWidth margin="0" paddingX="xl">
-                    <Background
-                        position="absolute"
-                        mask={{
-                            x: 100,
-                            y: 0,
-                            radius: 100,
-                        }}
-                        gradient={{
+                <Column fillWidth paddingY="80" horizontal="center" flex={1} style={{ minHeight: '100vh' }} >
+                    <Fade
+                        zIndex={3}
+                        pattern={{
                             display: true,
-                            x: 100,
-                            y: 60,
-                            width: 70,
-                            height: 50,
-                            tilt: -40,
-                            opacity: 90,
-                            colorStart: "accent-background-strong",
-                            colorEnd: "page-background",
+                            size: "4",
                         }}
-                        grid={{
-                            display: false,
-                            opacity: 100,
-                            width: "0.25rem",
-                            color: "neutral-alpha-medium",
-                            height: "0.25rem",
-                        }}
+                        position="fixed"
+                        top="0"
+                        left="0"
+                        to="bottom"
+                        height={5}
+                        fillWidth
+                        blur={0.25}
                     />
-                    <Column fillWidth paddingY="80" paddingX="xl" horizontal="center" flex={1} >
-                        <Fade
-                            zIndex={3}
-                            pattern={{
-                                display: true,
-                                size: "4",
-                            }}
-                            position="fixed"
-                            top="0"
-                            left="0"
-                            to="bottom"
-                            height={5}
-                            fillWidth
-                            blur={0.25}
-                        />
-                        <Grid>
-                            <Nav />
-                            {children}
-                        </Grid>
-                    </Column>
+                    <Nav />
+                    {children}
                 </Column>
             </ToastProvider>
         </Flex >
