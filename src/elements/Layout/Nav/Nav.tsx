@@ -2,11 +2,10 @@ import { Row, Logo, Button, IconButton, StyleOverlay, Icon, SmartLink, Text } fr
 
 export default function _() {
     return (
-        <Row position="fixed" top="0" fillWidth horizontal="center" zIndex={3}>
+        <Row position="fixed" top="0" left="0" horizontal="center" zIndex={3} paddingX="16" style={{ width: "100vw" }}>
             <Row
                 data-border="rounded"
                 horizontal="space-between"
-                fillWidth
                 paddingY="20"
                 width='l'
             >
@@ -20,10 +19,11 @@ export default function _() {
                         onBackground="neutral-medium"
                     >
                         <h3>
-                            My Works
+                            Zack's Portfolio
                         </h3>
                     </Text>
                 </SmartLink>
+
                 <Row gap="12" hide="s">
                     <Button
                         href="/team-taiwan"

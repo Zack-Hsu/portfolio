@@ -1,6 +1,7 @@
 import { Card, Column, Text, Line, Row, Icon, SmartImage, Grid } from "@/once-ui/components"
 import style from "./FigmaCard.module.scss"
 import { ReactNode } from "react"
+import { wrap } from "module"
 interface props {
     embedUrl: string,
     allowFullScreen: boolean,
@@ -14,42 +15,39 @@ interface props {
 export default function FigmaCard(props: props) {
     const { embedUrl, allowFullScreen, mainTitle, mainContent, footerContent } = props
     return (
-        <Grid columns={1} padding="2">
-            <Card
-                fillWidth
-                radius="l-4"
-                direction="column"
-                overflowX="hidden"
+        <Card
+            radius="l-4"
+            direction="column"
+            overflowX="hidden"
+            fillWidth
+        >
+            <iframe className={style.figmaIframe} src={embedUrl} allowFullScreen={allowFullScreen} />
+            <Column
+                paddingY="24"
+                gap="8"
+                padding="8"
             >
-                <iframe className={style.figmaIframe} src={embedUrl} allowFullScreen={allowFullScreen} />
-                <Column
-                    fillWidth
-                    paddingX="20"
-                    paddingY="24"
-                    gap="8"
+                <Text variant="body-default-xl" onBackground="brand-strong">
+                    {mainTitle}
+                </Text>
+                <Text
+                    onBackground="neutral-strong"
+                    variant="body-default-s"
                 >
-                    <Text variant="body-default-xl" onBackground="brand-strong">
-                        {mainTitle}
-                    </Text>
-                    <Text
-                        onBackground="neutral-strong"
-                        variant="body-default-s"
-                    >
-                        {mainContent}
-                    </Text>
-                </Column>
-                <Line background="neutral-alpha-medium" />
-                <Row
-                    paddingX="20"
-                    paddingY="12"
-                    gap="8"
-                    vertical="center"
-                    textVariant="label-default-s"
-                    onBackground="neutral-medium"
-                >
-                    {footerContent}
-                </Row>
-            </Card>
-        </Grid>
+                    {mainContent}
+                </Text>
+            </Column>
+            <Line background="neutral-alpha-medium" />
+            <Row
+                paddingX="8"
+                paddingY="12"
+                gap="8"
+                vertical="center"
+                textVariant="label-default-s"
+                onBackground="neutral-medium"
+            >
+                {footerContent}
+            </Row>
+        </Card>
     )
 }

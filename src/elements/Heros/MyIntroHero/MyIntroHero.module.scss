@@ -1,0 +1,42 @@
+.container {
+    background-image: url(/images/polish/background/g-pic@2x.png);
+
+    .sentence_container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        background-size: cover;
+        align-content: center;
+        width: 100%;
+
+        .annotation {
+            font-size: 16px;
+            color: #999486
+        }
+
+        .word {
+            font-size: 36px;
+            white-space: pre;
+            font-weight: bolder;
+        }
+    }
+}
+
+@media screen and (max-width:574px) {
+    .container {
+        .sentence_container {
+            .annotation {
+                font-size: 12px;
+                color: #999486
+            }
+
+            .word {
+                font-size: 22px;
+                white-space: pre;
+                font-weight: bolder;
+            }
+        }
+    }
+}

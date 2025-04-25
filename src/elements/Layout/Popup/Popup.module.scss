@@ -1,0 +1,52 @@
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    background-color: #000000c4;
+    justify-content: center;
+
+    &_content {
+        position: relative;
+        width: 90%;
+        height: 80%;
+        padding: 4rem;
+        z-index: 1000;
+        border-radius: .5rem;
+        overflow-y: auto;
+        /* Animation */
+        animation: slideDown 0.4s ease-out;
+        opacity: 0;
+        animation-fill-mode: forwards;
+
+        .close_btn {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            font-size: 32px;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width:574px) {
+    .popup {
+        &_content {
+            padding: 1rem;
+        }
+    }
+}

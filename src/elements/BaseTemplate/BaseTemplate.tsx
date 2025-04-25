@@ -37,7 +37,7 @@ const schemaData = {
     sameAs: Object.values(social).filter(Boolean),
 };
 
-export default function BaseTemplate(props: { children?: ReactNode }) {
+export default function PolishTemplate(props: { children?: ReactNode }) {
     const { children } = props
     return (
         <Flex
