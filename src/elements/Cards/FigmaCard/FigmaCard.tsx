@@ -2,6 +2,7 @@ import { Card, Column, Text, Line, Row, Icon, SmartImage, Grid } from "@/once-ui
 import style from "./FigmaCard.module.scss"
 import { ReactNode } from "react"
 import { wrap } from "module"
+import FadeInUp from "@/elements/AnimationEffects/FadeInUp/FadeInUp"
 interface props {
     embedUrl: string,
     allowFullScreen: boolean,
@@ -15,39 +16,41 @@ interface props {
 export default function FigmaCard(props: props) {
     const { embedUrl, allowFullScreen, mainTitle, mainContent, footerContent } = props
     return (
-        <Card
-            radius="l-4"
-            direction="column"
-            overflowX="hidden"
-            fillWidth
-        >
-            <iframe className={style.figmaIframe} src={embedUrl} allowFullScreen={allowFullScreen} />
-            <Column
-                paddingY="24"
-                gap="8"
-                padding="8"
+        <FadeInUp>
+            <Card
+                radius="l-4"
+                direction="column"
+                overflowX="hidden"
+                fillWidth
             >
-                <Text variant="body-default-xl" onBackground="brand-strong">
-                    {mainTitle}
-                </Text>
-                <Text
-                    onBackground="neutral-strong"
-                    variant="body-default-s"
+                <iframe className={style.figmaIframe} src={embedUrl} allowFullScreen={allowFullScreen} />
+                <Column
+                    paddingY="24"
+                    gap="8"
+                    padding="8"
                 >
-                    {mainContent}
-                </Text>
-            </Column>
-            <Line background="neutral-alpha-medium" />
-            <Row
-                paddingX="8"
-                paddingY="12"
-                gap="8"
-                vertical="center"
-                textVariant="label-default-s"
-                onBackground="neutral-medium"
-            >
-                {footerContent}
-            </Row>
-        </Card>
+                    <Text variant="body-default-xl" onBackground="brand-strong">
+                        {mainTitle}
+                    </Text>
+                    <Text
+                        onBackground="neutral-strong"
+                        variant="body-default-s"
+                    >
+                        {mainContent}
+                    </Text>
+                </Column>
+                <Line background="neutral-alpha-medium" />
+                <Row
+                    paddingX="8"
+                    paddingY="12"
+                    gap="8"
+                    vertical="center"
+                    textVariant="label-default-s"
+                    onBackground="neutral-medium"
+                >
+                    {footerContent}
+                </Row>
+            </Card>
+        </FadeInUp>
     )
 }

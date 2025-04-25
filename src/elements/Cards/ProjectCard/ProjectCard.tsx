@@ -1,79 +1,59 @@
-"use client";
-
-import {
-    AvatarGroup,
-    Carousel,
-    Column,
-    Flex,
-    Heading,
-    SmartLink,
-    Text,
-    Grid,
-    Background
-} from "@/once-ui/components";
-
-interface ProjectCardProps {
-    href?: string;
-    priority?: boolean;
-    images: {
-        src: string;
-        alt: string;
-    }[];
-    title: string;
-    description?: string;
-    avatars?: { src: string }[];
-    link?: string;
+import { Card, Column, Text, Line, Row, Icon, SmartImage, Grid, Carousel } from "@/once-ui/components"
+import style from "./FigmaCard.module.scss"
+import { ReactNode } from "react"
+import { wrap } from "module"
+import FadeInUp from "@/elements/AnimationEffects/FadeInUp/FadeInUp"
+interface props {
+    images: { src: string, alt: string }[],
+    mainTitle: string,
+    mainContent?: string | ReactNode,
+    footerContent?: string | ReactNode,
+    width?: number,
+    height?: number,
 }
 
-export default function ProjectCard(props: ProjectCardProps) {
-    const {
-        href,
-        images,
-        title,
-        description,
-        avatars,
-        link,
-    } = props
+export default function ProjectCard(props: props) {
+    const { images, mainTitle, mainContent, footerContent } = props
     return (
-        <Column fillWidth gap="m">
-            <Carousel
-                sizes="(max-width: 960px) 100vw, 960px"
-                images={images}
-            />
-            <Flex
-                mobileDirection="column"
+        <FadeInUp>
+            <Card
+                radius="l-4"
+                direction="column"
+                overflowX="hidden"
                 fillWidth
-                paddingX="s"
-                paddingTop="12"
-                paddingBottom="24"
-                gap="l"
-
             >
-                {title && (
-                    <Flex flex={5}>
-                        <Heading as="h2" wrap="balance" variant="heading-strong-xl">
-                            {title}
-                        </Heading>
-                    </Flex>
-                )}
-                <Column flex={7} >
-                    {description?.trim() && (
-                        <Text wrap="balance" align="start" variant="body-default-s" onBackground="neutral-weak" marginBottom="12">
-                            {description}
-                        </Text>
-                    )}
-                    {link && (
-                        <SmartLink
-                            prefixIcon="openLink"
-                            iconSize="xs"
-                            href={link}
-                            style={{ color: '#fff' }}
-                        >
-                            <Text variant="body-default-s" onBackground="neutral-weak">View project</Text>
-                        </SmartLink>
-                    )}
+                {images.map((itm) => {
+                    return (
+                        <Carousel images={images} />
+                    )
+                })}
+                <Column
+                    paddingY="24"
+                    gap="8"
+                    padding="8"
+                >
+                    <Text variant="body-default-xl" onBackground="brand-strong">
+                        {mainTitle}
+                    </Text>
+                    <Text
+                        onBackground="neutral-strong"
+                        variant="body-default-s"
+                    >
+                        {mainContent}
+                    </Text>
                 </Column>
-            </Flex>
-        </Column>
-    );
-};
+                <Line background="neutral-alpha-medium" />
+                <Row
+                    paddingX="8"
+                    paddingY="12"
+                    gap="8"
+                    vertical="center"
+                    textVariant="label-default-s"
+                    onBackground="neutral-medium"
+                >
+                    {footerContent}
+                </Row>
+            </Card>
+        </FadeInUp>
+    )
+}

@@ -1,5 +1,6 @@
 .container {
     background-image: url(/images/polish/background/g-pic@2x.png);
+    height: calc(100vh - 80px);
 
     .sentence_container {
         display: flex;

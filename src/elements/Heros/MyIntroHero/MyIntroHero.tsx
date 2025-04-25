@@ -25,32 +25,32 @@ export default function MyIntroHero() {
             />
             <Flex fillWidth maxWidth={'l'} minHeight={18} onBackground="neutral-medium" position="relative" paddingY="xl" paddingX="4">
                 <FlipReveal3D className={styles.sentence_container}>
-                    {"/* 會寫程式，也熱愛構思產品需求 */".split("").map((word, index) => (
+                    {"/* 會寫程式，也熱愛構思產品需求，你的重點，我會放在產品裡，能接得住需求，也能把它穩穩落地*/".split("").map((word, index) => (
                         <Text key={index} onBackground="neutral-weak">{word}</Text>
                     ))}
                 </FlipReveal3D>
                 <FlipReveal3D className={styles.sentence_container} delay={.5}>
-                    {"<Coding knowsProduct={true} />".split("").map((word, index) => (
+                    {"<Programmer".split("").map((word, index) => (
                         <div key={index} className={styles.word}>{word}</div>
                     ))}
                 </FlipReveal3D>
                 <FlipReveal3D className={styles.sentence_container} delay={1}>
-                    {"/* 能接得住需求，也能把它穩穩落地 */".split("").map((word, index) => (
-                        <Text key={index} onBackground="neutral-weak">{word}</Text>
+                    {"  understands='product'".split("").map((word, index) => (
+                        <div key={index} className={styles.word}>{word}</div>
                     ))}
                 </FlipReveal3D>
                 <FlipReveal3D className={styles.sentence_container} delay={1.5}>
-                    {"<Request handled={true} />".split("").map((word, index) => (
+                    {"  handles='requests'".split("").map((word, index) => (
                         <div key={index} className={styles.word}>{word}</div>
                     ))}
                 </FlipReveal3D>
                 <FlipReveal3D className={styles.sentence_container} delay={2}>
-                    {" /* 你的重點，我會放在產品裡 */".split("").map((word, index) => (
-                        <Text key={index} onBackground="neutral-weak">{word}</Text>
+                    {"  builds='whatMatters'".split("").map((word, index) => (
+                        <div key={index} className={styles.word}>{word}</div>
                     ))}
                 </FlipReveal3D>
                 <FlipReveal3D className={styles.sentence_container} delay={2.5}>
-                    {"<Product focus='What Matters' />".split("").map((word, index) => (
+                    {"/>".split("").map((word, index) => (
                         <div key={index} className={styles.word}>{word}</div>
                     ))}
                 </FlipReveal3D>

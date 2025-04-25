@@ -64,7 +64,7 @@ export default function PolishTemplate(props: { children?: ReactNode }) {
         >
             <Link rel="stylesheet" href="https://use.typekit.net/pxc5lqp.css" />
             <ToastProvider>
-                <Column fillWidth paddingY="80" horizontal="center" flex={1} style={{ minHeight: '100vh' }} >
+                <Column fillWidth paddingY="80" horizontal="center" flex={1} paddingX="16" style={{ minHeight: '100vh' }} >
                     <Fade
                         zIndex={3}
                         pattern={{

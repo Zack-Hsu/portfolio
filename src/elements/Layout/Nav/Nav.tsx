@@ -2,7 +2,7 @@ import { Row, Logo, Button, IconButton, StyleOverlay, Icon, SmartLink, Text } fr
 
 export default function _() {
     return (
-        <Row position="fixed" top="0" left="0" horizontal="center" zIndex={3} paddingX="16" style={{ width: "100vw" }}>
+        <Row position="fixed" top="0" left="0" horizontal="center" zIndex={3} paddingX="16" style={{ width: "100vw", height: "fit-content" }}>
             <Row
                 data-border="rounded"
                 horizontal="space-between"

@@ -5,6 +5,8 @@ import { ReactElement, useEffect, useMemo, useState } from "react";
 import DrayTekCertificationPopup from "./DrayTekCertification/DrayTekCertificationPopup/DrayTekCertificationPopup";
 import DrayTekCertification from "./DrayTekCertification/DrayTekCertification";
 import DrayTekOfficialWeb from "./DrayTekOfficialWeb/DrayTekOfficialWeb";
+import StrictG from "./StrictG/StrictG";
+import Beitou from "./Beitou/Beitou";
 
 export default function () {
     const [popupItem, setPopupItem] = useState<null | ReactElement>(null)
@@ -21,6 +23,8 @@ export default function () {
             <Grid fillWidth maxWidth="l" columns={2} mobileColumns={1} gap="16" >
                 <DrayTekCertification />
                 <DrayTekOfficialWeb />
+                <StrictG />
+                <Beitou />
             </Grid>
         </Flex>
     )
